@@ -1,0 +1,16 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1d1b26;background:#f6f4fb;line-height:1.5}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:#fff;border-bottom:1px solid #e3e0ee}
+.brand{font-weight:700;font-size:1.05em}.logo{color:#5b3fd6;margin-right:4px}.ver{font-weight:400;color:#5f5b6e;font-size:.85em;margin-left:6px}
+.lang button{font:inherit;padding:6px 12px;border:1px solid #d4cfe6;background:#fff;cursor:pointer;color:#1d1b26}
+.lang button:first-child{border-radius:8px 0 0 8px}.lang button:last-child{border-radius:0 8px 8px 0;border-left:0}
+.lang button[aria-pressed="true"]{background:#5b3fd6;color:#fff;border-color:#5b3fd6}
+main{max-width:1040px;margin:0 auto;padding:28px}
+.hero h1{font-size:1.9em;margin:.2em 0}.hero p{color:#5f5b6e;max-width:640px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:28px 0}
+.card{background:transparent}.card h2{font-size:1em;margin:0 0 10px;color:#5f5b6e;font-weight:600}
+.card .solpay{margin:0}
+.note{font-size:.85em;color:#5f5b6e;margin:0 0 10px;max-width:300px}
+.info{background:#fff;border:1px solid #e3e0ee;border-radius:16px;padding:18px 24px}.info h2{font-size:1.1em;margin:.2em 0}
+footer{text-align:center;color:#5f5b6e;font-size:.85em;padding:24px}
+.info .note{max-width:none}

@@ -1,0 +1,16 @@
+/* solpay-knopf v0.2 – keine Inline-Styles nötig (CSP-freundlich) */
+.solpay{--sp-accent:#5b3fd6;--sp-accent-d:#4129a8;--sp-text:#1d1b26;--sp-muted:#5f5b6e;--sp-border:#e3e0ee;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--sp-text);background:#fff;
+  max-width:300px;border:1px solid var(--sp-border);border-radius:16px;padding:18px;text-align:center;
+  box-shadow:0 4px 18px rgba(40,20,90,.06)}
+.solpay-btn{display:block;background:var(--sp-accent);color:#fff;text-decoration:none;padding:12px 14px;border-radius:10px;font-weight:600}
+.solpay-btn:hover,.solpay-btn:focus-visible{background:var(--sp-accent-d)}
+.solpay-btn:focus-visible,.solpay button:focus-visible{outline:3px solid #b9a8ff;outline-offset:2px}
+.solpay-qr svg{width:196px;height:196px;margin:14px auto 6px;display:block}
+.solpay-hint{font-size:.85em;color:var(--sp-muted);margin:0 0 10px}
+.solpay-row{display:flex;gap:8px;justify-content:center}
+.solpay button{padding:7px 12px;border-radius:8px;border:1px solid var(--sp-border);background:#faf9fe;color:var(--sp-text);cursor:pointer;font:inherit;font-size:.9em}
+.solpay button:hover{border-color:var(--sp-accent)}
+.solpay-status{font-size:.9em;min-height:1.3em;margin:10px 0 0}
+.solpay-ok{color:#11734b}.solpay-warn{color:#8a5a00}.solpay-error{color:#b3261e}
+.solpay-link{color:var(--sp-accent)}

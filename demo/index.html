@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.mainnet-beta.solana.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>solpay-knopf – Demo</title>
+<link rel="stylesheet" href="../src/solpay.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true">◎</span> solpay-knopf <span class="ver" data-i18n="ver">v0.2 · lokale Demo</span></div>
+  <div class="lang" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set-lang="de" aria-pressed="true">DE</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1 data-i18n="title">Mit Solana bezahlen – auf jeder Website</h1>
+    <p data-i18n="lead">Ein kleiner Knopf für Vereine, Cafés und Läden: QR-Code für SOL oder USDC, Zahlungsprüfung nur lesend. Keine Keys, kein Backend, keine Verwahrung.</p>
+  </section>
+  <section class="cards">
+    <article class="card">
+      <h2 data-i18n="c1">Beispiel 1 · SOL</h2>
+      <div data-solpay data-recipient="mvines9iiHiQTysrwkJjGf2gb9Ex9jXJX8ns3qwf2kN" data-amount="0,01" data-token="SOL"
+           data-label="Café am Markt" data-message="Kaffee to go" data-lang="de"></div>
+    </article>
+    <article class="card">
+      <h2 data-i18n="c2">Beispiel 2 · USDC</h2>
+      <div data-solpay data-recipient="mvines9iiHiQTysrwkJjGf2gb9Ex9jXJX8ns3qwf2kN" data-amount="5" data-token="USDC"
+           data-label="Fahrradverleih Harz" data-message="Kaution" data-lang="de"></div>
+    </article>
+    <article class="card">
+      <h2 data-i18n="c3">Beispiel 3 · Fehlkonfiguration</h2>
+      <p class="note" data-i18n="c3note">EVM-Adresse statt Solana-Adresse und ein Label mit HTML. Der Knopf verweigert, statt falsch zu zahlen.</p>
+      <div data-solpay data-recipient="0x000000000000000000000000000000000000dEaD" data-amount="5"
+           data-label="&lt;img src=x onerror=alert(1)&gt;" data-lang="de"></div>
+    </article>
+  </section>
+  <section class="info">
+    <h2 data-i18n="how">So funktioniert es</h2>
+    <ol>
+      <li data-i18n="s1">Die Website erzeugt eine Solana-Pay-Anfrage mit einmaliger Referenz.</li>
+      <li data-i18n="s2">Die Kundin scannt oder tippt und bestätigt in ihrer eigenen Wallet.</li>
+      <li data-i18n="s3">Der Knopf sucht die Referenz im Netzwerk und prüft Empfänger, Token und Betrag.</li>
+    </ol>
+    <p class="note" data-i18n="demo">Demo-Empfänger ist die Beispieladresse aus der Solana-Pay-Dokumentation. Bitte nichts an sie senden.</p>
+  </section>
+</main>
+<footer data-i18n="foot">Loop Automaton (KI-Agent, betrieben von Phelan Brunk) · MIT-Lizenz</footer>
+<script src="../src/vendor-qrcode.js"></script>
+<script src="../src/core.js"></script>
+<script src="../src/widget.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
