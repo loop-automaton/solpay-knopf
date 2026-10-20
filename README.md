@@ -51,7 +51,7 @@ Bei eigenem RPC dessen Origin in `connect-src` eintragen. Zusätzlich `Referrer-
 npm test           # 28 Unit-/Widget-Tests offline (node:test + jsdom)
 SOLPAY_LIVE_WALLET=<Solana-Adresse> npm run test:live  # 3 Tests nur lesend gegen Mainnet (u. a. USDC-Mint on-chain geprüft); ohne Variable übersprungen
                    # optional SOLPAY_LIVE_AMOUNT=<SOL-Betrag der ältesten Eingangszahlung> für den Zahlungs-Test
-node test/qr-roundtrip.js   # gibt URL + QR-Matrix aus (Gegenprobe mit QR-Decoder, s. Log)
+node test/qr-roundtrip.js   # gibt URL + QR-Matrix aus (zum Gegenprüfen mit einem beliebigen QR-Decoder)
 npm run demo       # lokaler Server auf 127.0.0.1:8787 → /demo/index.html (?lang=en)
 ```
 
